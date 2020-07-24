@@ -22,6 +22,7 @@ from ..europe import (
     Iceland,
     Ireland,
     Italy,
+    Kazakhstan,
     Latvia,
     Lithuania,
     Luxembourg,
@@ -813,6 +814,54 @@ class ItalyTest(GenericCalendarTest):
         holidays = dict(holidays)
         self.assertEqual(
             holidays[date(2020, 5, 1)], "International Workers' Day")
+
+
+class KazakhstanTest(GenericCalendarTest):
+    cal_class = Kazakhstan
+
+    def test_year_2021(self):
+        holidays = self.cal.holidays_set(2021)
+        self.assertIn(date(2021, 1, 1), holidays)  # new year
+        self.assertIn(date(2021, 1, 2), holidays)  # new year holiday
+        self.assertIn(date(2021, 1, 4), holidays)  # new year holiday
+        self.assertIn(date(2021, 1, 7), holidays)  # Orthodox Christmas
+        self.assertIn(date(2021, 3, 8), holidays)  # International Women Day
+        self.assertIn(date(2021, 3, 21), holidays)  # Nauryz
+        self.assertIn(date(2021, 3, 22), holidays)  # Nauryz
+        self.assertIn(date(2021, 3, 23), holidays)  # Nauryz
+        self.assertIn(date(2021, 5, 1), holidays)  # Unity Day
+        self.assertIn(date(2021, 5, 3), holidays)  # Unity Day
+        self.assertIn(date(2021, 5, 7), holidays)  # Defender of the Fatherland
+        self.assertIn(date(2021, 5, 9), holidays)  # Victory Day
+        self.assertIn(date(2021, 5, 10), holidays)  # Victory Day Holiday
+        self.assertIn(date(2021, 7, 6), holidays)  # Capital City Day
+        self.assertIn(date(2021, 7, 20), holidays)  # Kurban Ait
+        self.assertIn(date(2021, 8, 30), holidays)  # Constitution Day
+        self.assertIn(date(2021, 12, 1), holidays)  # First President Day
+        self.assertIn(date(2021, 12, 16), holidays)  # Independence Day
+        self.assertIn(date(2021, 12, 17), holidays)  # Independence Day holiday
+
+    def test_year_2022(self):
+        holidays = self.cal.holidays_set(2022)
+        self.assertIn(date(2022, 1, 1), holidays)  # new year
+        self.assertIn(date(2022, 1, 2), holidays)  # new year holiday
+        self.assertIn(date(2022, 1, 3), holidays)  # new year holiday
+        self.assertIn(date(2022, 1, 7), holidays)  # Orthodox Christmas
+        self.assertIn(date(2022, 3, 8), holidays)  # International Women Day
+        self.assertIn(date(2022, 3, 21), holidays)  # Nauryz
+        self.assertIn(date(2022, 3, 22), holidays)  # Nauryz
+        self.assertIn(date(2022, 3, 23), holidays)  # Nauryz
+        self.assertIn(date(2022, 5, 1), holidays)  # Unity Day
+        self.assertIn(date(2022, 5, 2), holidays)  # Unity Day
+        self.assertIn(date(2022, 5, 7), holidays)  # Defender of the Fatherland
+        self.assertIn(date(2022, 5, 9), holidays)  # Victory Day
+        self.assertIn(date(2022, 5, 10), holidays)  # Victory Day Holiday
+        self.assertIn(date(2022, 7, 6), holidays)  # Capital City Day
+        self.assertIn(date(2022, 7, 10), holidays)  # Kurban Ait
+        self.assertIn(date(2022, 8, 30), holidays)  # Constitution Day
+        self.assertIn(date(2022, 12, 1), holidays)  # First President Day
+        self.assertIn(date(2022, 12, 16), holidays)  # Independence Day
+        self.assertIn(date(2022, 12, 19), holidays)  # Independence Day holiday
 
 
 class LatviaTest(GenericCalendarTest):
