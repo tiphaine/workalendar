@@ -169,6 +169,7 @@ Africa
 * Ivory Coast
 * Kenya
 * Madagascar
+* Morocco
 * São Tomé
 * South Africa
 
