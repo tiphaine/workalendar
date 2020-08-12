@@ -7,6 +7,7 @@ from ..africa import (
     IvoryCoast,
     Kenya,
     Madagascar,
+    Morocco,
     SaoTomeAndPrincipe,
     SouthAfrica,
 )
@@ -600,3 +601,61 @@ class KenyaTest(GenericCalendarTest):
         self.assertIn(date(2020, 12, 26), holidays)  # Utamaduni Day
         self.assertIn(date(2020, 12, 31), holidays)  # New Years Eve
         self.assertEqual(len(holidays), 14)
+
+
+class Morocco(GenericCalendarTest):
+    cal_class = Morocco
+
+    def test_year_2021(self):
+        holidays = self.cal.holidays_set(2021)
+        self.assertIn(date(2021, 1, 1), holidays)  # New year
+        self.assertIn(date(2021, 1, 11), holidays)  # Manifeste de l'indépendance
+        self.assertIn(date(2021, 5, 1), holidays)  # Labour day
+        self.assertIn(date(2021, 5, 13), holidays)  # Aid Al-Fitr
+        self.assertIn(date(2021, 5, 14), holidays)  # Aid Al-Fitr
+        self.assertIn(date(2021, 7, 20), holidays)  # Aid Al-Adha
+        self.assertIn(date(2021, 7, 21), holidays)  # Aid Al-Adha
+        self.assertIn(date(2021, 7, 30), holidays)  # Fete du trone
+        self.assertIn(date(2021, 8, 10), holidays)  # Jour de l'an Hegire
+        self.assertIn(date(2021, 8, 14), holidays)  # Anniversaire de la récupération de Oued Eddahab
+        self.assertIn(date(2021, 8, 20), holidays)  # Anniversaire de la révolution du Roi et du peuple
+        self.assertIn(date(2021, 8, 21), holidays)  # Fête de la jeunesse
+        self.assertIn(date(2021, 10, 19), holidays)  # Aïd Al-Mawlid Annabawi
+        self.assertIn(date(2021, 11, 6), holidays)  # Anniversaire de la marche verte
+        self.assertIn(date(2021, 11, 18), holidays)  # Fête de l'indépendance
+
+    def test_year_2022(self):
+        holidays = self.cal.holidays_set(2022)
+        self.assertIn(date(2022, 1, 1), holidays)  # New year
+        self.assertIn(date(2022, 1, 11), holidays)  # Manifeste de l'indépendance
+        self.assertIn(date(2022, 5, 1), holidays)  # Labour day
+        self.assertIn(date(2022, 5, 3), holidays)  # Aid Al-Fitr
+        self.assertIn(date(2022, 5, 4), holidays)  # Aid Al-Fitr
+        self.assertIn(date(2022, 7, 10), holidays)  # Aid Al-Adha
+        self.assertIn(date(2022, 7, 11), holidays)  # Aid Al-Adha
+        self.assertIn(date(2022, 7, 30), holidays)  # Fete du trone
+        self.assertIn(date(2022, 7, 30), holidays)  # Jour de l'an Hegire
+        self.assertIn(date(2022, 8, 14), holidays)  # Anniversaire de la récupération de Oued Eddahab
+        self.assertIn(date(2022, 8, 20), holidays)  # Anniversaire de la révolution du Roi et du peuple
+        self.assertIn(date(2022, 8, 21), holidays)  # Fête de la jeunesse
+        self.assertIn(date(2022, 10, 8), holidays)  # Aïd Al-Mawlid Annabawi
+        self.assertIn(date(2022, 11, 6), holidays)  # Anniversaire de la marche verte
+        self.assertIn(date(2022, 11, 18), holidays)  # Fête de l'indépendance
+
+    def test_year_2023(self):
+        holidays = self.cal.holidays_set(2023)
+        self.assertIn(date(2023, 1, 1), holidays)  # New year
+        self.assertIn(date(2023, 1, 11), holidays)  # Manifeste de l'indépendance
+        self.assertIn(date(2023, 4, 22), holidays)  # Aid Al-Fitr
+        self.assertIn(date(2023, 4, 23), holidays)  # Aid Al-Fitr
+        self.assertIn(date(2023, 5, 1), holidays)  # Labour day
+        self.assertIn(date(2023, 6, 29), holidays)  # Aid Al-Adha
+        self.assertIn(date(2023, 6, 30), holidays)  # Aid Al-Adha
+        self.assertIn(date(2023, 7, 19), holidays)  # Jour de l'an Hegire
+        self.assertIn(date(2023, 7, 30), holidays)  # Fete du trone
+        self.assertIn(date(2023, 8, 14), holidays)  # Anniversaire de la récupération de Oued Eddahab
+        self.assertIn(date(2023, 8, 20), holidays)  # Anniversaire de la révolution du Roi et du peuple
+        self.assertIn(date(2023, 8, 21), holidays)  # Fête de la jeunesse
+        self.assertIn(date(2023, 9, 27), holidays)  # Aïd Al-Mawlid Annabawi
+        self.assertIn(date(2023, 11, 6), holidays)  # Anniversaire de la marche verte
+        self.assertIn(date(2023, 11, 18), holidays)  # Fête de l'indépendance
